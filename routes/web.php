@@ -12,18 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth/login');
 });
 Route::Resource('fallas/falla','FallaController');
 Route::Resource('multas/policia','PoliciaController');
 Route::Resource('pagos/conductor','ConductorController');
 Route::Resource('multas/multa','MultasController');
-Route::Resource('compras/ingreso','IngresoController');
-Route::Resource('ventas/venta','VentaController');
+Route::Resource('seguridad/usuario','UsuarioController');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+

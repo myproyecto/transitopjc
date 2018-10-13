@@ -30,13 +30,13 @@
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
                     <div class="form-group">
                         <label for="nombre">Nombre Infraccion</label>
-                        <input type="text" name="nombre" required value="{{old('nombre')}}" class="form-control" placeholder="Nombre...">
+                        <input type="text" name="nombre"  value="{{old('nombre')}}" class="form-control" placeholder="Nombre..." required autofocus>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+                <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
                     <div class="form-group">
                         <label for="nombre">Descripción</label>
-                        <input type="text" name="descripcion" required value="{{old('descripcion')}}" class="form-control" placeholder="Descripción...">
+                        <input type="text" name="descripcion" value="{{old('descripcion')}}" class="form-control" placeholder="Descripción..." required autofocus>
                     </div>
                 </div>            
         

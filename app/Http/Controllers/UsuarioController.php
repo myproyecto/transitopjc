@@ -24,6 +24,7 @@ class UsuarioController extends Controller
     		$query=trim($request->get('searchText'));
     		$usuarios=DB::table('users')
     		->where('name','LIKE','%'.$query.'%')
+        ->where('username','LIKE','%'.$query.'%')
     		->orderby('id','desc')
     		->paginate(7);
     		return view('seguridad.usuario.index',["usuarios"=>$usuarios,"searchText" =>$query]);

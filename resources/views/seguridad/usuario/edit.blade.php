@@ -25,7 +25,7 @@
     		    <div class="form-group">
 
     			    <label for="nombre">Nombre</label>
-    			    <input type="text" name="nombre"  value="{{$falla->nombre}}" class="form-control" required autofocus>
+    			    <input type="text" name="nombre" required value="{{$falla->nombre}}" class="form-control">
     		    </div>
     	    </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
