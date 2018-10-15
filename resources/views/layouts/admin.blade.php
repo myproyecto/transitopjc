@@ -156,7 +156,7 @@
             
             </div>
           </div>
-            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+            
         <!-- /.sidebar -->
       </aside>
 
@@ -218,6 +218,7 @@
     @stack('scripts')
     <!-- Bootstrap 3.3.5 -->
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
     <!-- AdminLTE App -->
