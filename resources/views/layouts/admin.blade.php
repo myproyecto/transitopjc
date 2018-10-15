@@ -146,9 +146,20 @@
             </li>
                         
           </ul>
+          
         </section>
+        <div class="cleanslate w24tz-current-time w24tz-middle" style="display: inline-block !important; visibility: hidden !important; min-width:200px !important; min-height:200px !important;">
+            <p>
+              <a href="//24timezones.com/current_local/paraguay_time.php" style="text-decoration: none" class="clock24" id="tz24-1539612667-cc14789-eyJob3VydHlwZSI6MTIsInNob3dkYXRlIjoiMSIsInNob3dzZWNvbmRzIjoiMCIsImNvbnRhaW5lcl9pZCI6ImNsb2NrX2Jsb2NrX2NiNWJjNDlmZmJjMmZlZiIsInR5cGUiOiJkYiIsImxhbmciOiJlcyJ9" title="Hora en Paraguay" target="_blank" rel="nofollow">Hora actual en Paraguay</a>
+            </p>
+            <div id="clock_block_cb5bc49ffbc2fef">
+            
+            </div>
+          </div>
+            <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
         <!-- /.sidebar -->
       </aside>
+
 
 
 
@@ -157,6 +168,7 @@
        <!--Contenido-->
       <!-- Content Wrapper. Contains page content -->
       <div class="content-wrapper">
+        
         
         <!-- Main content -->
         <section class="content">
@@ -188,6 +200,7 @@
               </div><!-- /.box -->
             </div><!-- /.col -->
           </div><!-- /.row -->
+          
 
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
@@ -196,7 +209,7 @@
         <div class="pull-right hidden-xs">
           <b>Version</b> 1.0
         </div>
-        <strong>Copyright &copy; 2015-2020 <a href="aleosmardiaz@gmail.com">Informatica</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2015-2020 <a href="aleosmardiaz@gmail.com">Informatica</a>.</strong> Todos los derechos reservados
       </footer>
 
       
