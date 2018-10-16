@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 use Tesis\http\Requests;
 use Illuminate\Support\Facades\Redirect;
 use Tesis\User;
-use DB;
+
 use Tesis\Http\Requests\UsuarioFormRequest;
+use DB;
 
 class UsuarioController extends Controller
 {
@@ -50,25 +51,20 @@ class UsuarioController extends Controller
       	return redirect::to('seguridad/usuario');
     }  
 
-    public function show($cod)
-    {
-    	return view("seguridad.usuario.show",["usuario"=>User::findOrFail($cod)]);
-    }
-
     public function edit($cod)
     {
-    	return view("seguridad.usuario.show",["usuario"=>User::findOrFail($cod)]);
+    	return view("seguridad.usuario.edit",["usuario"=>User::findOrFail($cod)]);
     }
 
     public function update(UsuarioFormRequest $request,$cod)
     {
 
-    	$persona=User::findOrFail($cod);
+    	$usuario=User::findOrFail($cod);
      	$usuario->name=$request->get('name');
      	$usuario->username=$request->get('username');
      	$usuario->email=$request->get('email');
      	$usuario->password=bcrypt($request->get('password'));
-     	$usuario->save();
+     	$usuario->update();
       	return redirect::to('seguridad/usuario');
     }
 

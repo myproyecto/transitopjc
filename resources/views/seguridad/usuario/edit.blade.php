@@ -2,7 +2,7 @@
 @section ('Contenido')
 	<div class="row">
 		<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-			<h3>Editar Infracciones: {{ $falla->nombre}}</h3>
+			<h3>Editar Usuario: {{ $usuario->name}}</h3>
 			@if (count($errors)>0)
 			<div class="alert alert-danger">
 				<ul>
@@ -16,37 +16,75 @@
 	</div>
 
 
-			{!!Form::model($falla,['method'=>'PATCH','route'=>['falla.update',$falla->idfalla],'files'=>'true'])!!}
+			{!!Form::model($usuario,['method'=>'PATCH','route'=>['usuario.update',$usuario->id]])!!}
             {{Form::token()}}
 <div class="panel panel-primary">
     <div class="panel-body" style="background-color:  #e5e7e9">
         <div class="row">
-    	    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-    		    <div class="form-group">
+    	    <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
+                <label for="name" class="col-md-12 control-label">Nombre</label>
 
-    			    <label for="nombre">Nombre</label>
-    			    <input type="text" name="nombre" required value="{{$falla->nombre}}" class="form-control">
-    		    </div>
-    	    </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="form-group">
-                    <label for="descripcion">Descripcion</label>
-                    <input type="text" name="descripcion" value="{{$falla->descripcion}}" class="form-control" placeholder="Descripcion...">
-                </div>
-            </div>
-    	</div>
+                <div class="col-md-6">
+                    <input id="name" type="text" class="form-control" name="name" value="{{$usuario->name}}" required autofocus>
 
-        <div class="row">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                <div class="form-group">
-                    <label for="imagen">Imagen</label>
-                    <input type="file" name="imagen" class="form-control">
-                    @if(($falla->imagen)!="")
-                        <img src="{{asset('imagenes/fallas/'.$falla->imagen)}}" height="100px" width="100px">
+                    @if ($errors->has('name'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('name') }}</strong>
+                    </span>
                     @endif
                 </div>
             </div>
 
+            <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
+                <label for="username" class="col-md-12 control-label">Nombre Usuario</label>
+
+                <div class="col-md-6">
+                    <input id="username" type="text" class="form-control" name="username" value="{{$usuario->username }}" required autofocus>
+
+                    @if ($errors->has('username'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('username') }}</strong>
+                    </span>
+                    @endif
+                </div>
+            </div>
+
+
+            <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
+                <label for="email" class="col-md-12 control-label">Correo</label>
+
+                <div class="col-md-6">
+                    <input id="email" type="email" class="form-control" name="email" value="{{ $usuario->email }}" required autofocus>
+
+                    @if ($errors->has('email'))
+                        <span class="help-block">
+                            <strong>{{ $errors->first('email') }}</strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+
+            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+                <label for="password" class="col-md-12 control-label">Contraseña</label>
+
+                <div class="col-md-6">
+                    <input id="password" type="password" class="form-control" name="password" required>
+
+                    @if ($errors->has('password'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('password') }}</strong>
+                    </span>
+                    @endif
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="password-confirm" class="col-md-12 control-label">Confirmar Contraseña</label>
+
+                <div class="col-md-6">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
+                </div>
+            </div>
         </div>
         
         <div class="row">
